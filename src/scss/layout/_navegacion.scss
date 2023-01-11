@@ -1,13 +1,33 @@
-.barra {
-    display:  flex;
+.derecha{
+    display: flex;
     flex-direction: column;
-    padding-top: 3rem;
     align-items: center;
     @include tablet{
-        flex-direction: row;
-        justify-content: space-between;
         align-items: flex-end;
     }
+    .dark-mode-boton{
+        width: 3rem;
+        margin-top: 3rem;
+        margin-bottom: 3rem;
+        filter: invert(100%);//invierte color
+        &:hover{
+            cursor: pointer;
+        }
+        @include tablet{
+            margin-top: 0;
+        }
+    }
+}
+.barra {
+     display:  flex;
+     flex-direction: column;
+     padding-top: 3rem;
+     align-items: center;
+     @include tablet{
+         flex-direction: row;
+         justify-content: space-between;
+         align-items: flex-end;
+     }
 
 }
 .navegacion{
@@ -35,4 +55,23 @@
             }
         }
     }
+}
+
+.mobile-menu{
+    @include tablet{
+        display: none;
+    }
+    img{
+        width: 5rem ;
+    }
+}
+.mostrar{
+    // display: flex;
+    // flex-direction: column;
+    // @include tablet{
+    //     flex-direction: row;
+    // }
+    visibility: visible;
+    opacity: 1;
+    height: auto;
 }
